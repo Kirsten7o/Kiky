@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-assets>
+        <!-- Replace with actual URLs -->
+        <a-asset-item id="colosseum-model" src="https://your-colosseum-model-url.glb"></a-asset-item>
+        <a-asset-item id="heart-model" src="https://your-heart-model-url.glb"></a-asset-item>
+      </a-assets>
+      
+      <a-marker preset="hiro">
+        <a-entity gltf-model="#colosseum-model" scale="0.05 0.05 0.05" position="0 0 0"></a-entity>
+      </a-marker>
+      
+      <a-marker preset="kanji">
+        <a-entity gltf-model="#heart-model" scale="0.1 0.1 0.1" position="0 0 0"></a-entity>
+      </a-marker>
+      
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
